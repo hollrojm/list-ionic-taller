@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>operaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Ingresa primer numero numero:</ion-label>
+    <ion-input [(ngModel)]="numero1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Ingresa segundo numero:</ion-label>
+    <ion-input [(ngModel)]="numero2"></ion-input>
+  </ion-item>
+
+  <ion-button color="primary" (click)="suma()" >
+    +
+  </ion-button>
+  <ion-button color="primary" (click)="resta()">
+    -
+  </ion-button>
+  <ion-button color="primary" (click)="multiplicacion()">
+    *
+  </ion-button>
+  <ion-button color="primary" (click)="division()" >
+    /
+  </ion-button>
+
+
+    El resultado es: {{resultado}}
+
+
+
+</ion-content>
