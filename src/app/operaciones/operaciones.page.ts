@@ -7,29 +7,70 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperacionesPage implements OnInit {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   ngOnInit() {
   }
-  numero1= 0;
-  numero2=0;
-  resultado= 0;
+  numero1:any;
+  numero2:any;
+  resultado:number;
+  operacion= null;
+
+
 
 suma(){
-  
-this.resultado = (this.numero1) + (this.numero2);
+
+  let num1 = parseInt(this.numero1);
+      let num2 = parseInt(this.numero2);
+      this.resultado =  num1 + num2;
 
 
  }
  resta(){
-  this.resultado= this.numero1 * this.numero2;
+  let num3 = parseInt(this.numero1);
+  let num4 = parseInt(this.numero2);
+   this.resultado = num3 - num4;
+
 }
 multiplicacion(){
-  this.resultado= (this.numero1 - this.numero2);
+  let num1 = parseInt(this.numero1);
+  let num2 = parseInt(this.numero2);
+  this.resultado = num1 * num2;
 }
 division(){
-  this.resultado= (this.numero1 / this.numero2);
+  let num1 = this.numero1;
+  let num2 = this.numero2;
+  this.resultado = num1 / num2;
+
 }
+  result(){
+  let op = this.operacion
+  switch (op) {
+    case '+':
+      this.suma()
+      break;
+    case '-':
+      this.resta()
+      break;
+    case '*':
+      this.multiplicacion()
+      break;
+    case '/':
+      this.division()
+      break;
+
+    default:
+      console.log('ingresa una operacion valida');
+  }
+
+  }
 
 
 }
+
+
+
+
+
